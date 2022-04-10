@@ -20,7 +20,7 @@ config:
 
 # Clean up Jupyter files
 clean:
-	jupyter-book clean
+	jupyter-book clean book/
 
 # Build Jupyter book
 build:
@@ -29,3 +29,6 @@ build:
 # Preview book HTML
 preview:
 	open book/_build/html/index.html
+
+# Run all steps
+all: clean build preview
