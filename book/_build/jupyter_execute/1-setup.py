@@ -21,46 +21,21 @@
 # 
 # ## Getting Started
 # 
-# COMING SOON
+# coming soon!
 
 # In[1]:
 
 
-from matplotlib import rcParams, cycler
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-plt.ion()
 
 
 # In[2]:
 
 
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-N = 10
-data = [np.logspace(0, 1, 100) + np.random.randn(100) + ii for ii in range(N)]
-data = np.array(data).T
-cmap = plt.cm.coolwarm
-rcParams['axes.prop_cycle'] = cycler(color=cmap(np.linspace(0, 1, N)))
-
-
-from matplotlib.lines import Line2D
-custom_lines = [Line2D([0], [0], color=cmap(0.), lw=4),
-                Line2D([0], [0], color=cmap(.5), lw=4),
-                Line2D([0], [0], color=cmap(1.), lw=4)]
-
-fig, ax = plt.subplots(figsize=(10, 5))
-lines = ax.plot(data)
-ax.legend(custom_lines, ['Cold', 'Medium', 'Hot']);
-
-
-# In[3]:
-
-
 # load our video game sales dataset
 df = pd.read_csv("data/video-game-sales.csv")
+
+# show the first 5 rows
 df.head()
 
 
@@ -69,18 +44,32 @@ df.head()
 
 # ## Business Case Study
 # 
-# Imagine that we are running an online blog which reports on video games throughout the years.
+# Our client Off Switch Gaming is a global company who wants to understand the transformational journey that video games have experienced over the past 2 decades.
 # 
-# We've discovered this dataset and we want to describe the transformational journey that video games have experienced over the past 2 decades.
+# In particular our client wants us understand a particular data asset one of their analysts created.
 # 
-# In particular we want to try to answer a few questions about our dataset:
+# The dataset includes the following fields:
 # 
-# 1. How many records do we have?
-# 2. What was the most popular game ever based on total sales?
-# 3. How many years' of data do we have and how many games were released per year?
-# 4. Which region has the most sales? How does it compare to the others?
-# 5. Show the releases and total sales for each genre - is there any relationship?
-# 6. Were there specific genres which experienced explosive growth in releases over time?
+# | Column Name   | Description                      |
+# | ------------- | -------------------------------- |
+# | rank          | Game ranking by global sales     |
+# | name          | Name of the game                 |
+# | platform      | Name of the gaming platform      |
+# | release_year  | Year a game was released in YYYY |
+# | genre         | Game genre                       |
+# | publisher     | Name of the game publisher       |
+# | north_america | USA & Canada sales in $ millions |
+# | europe        | Europe sales in $ millions       |
+# | japan         | Japan sales in $ millions        |
+# | other         | All other countries sales        |
+# | total_sales   | Combined total sales             |
 # 
-
+# ### Exploratory Data Analysis
 # 
+# * How many games were released per year?
+# * What are most popular game ever based on global sales?
+# * What are the top genres by sales?
+# * What are the average sales for each genre?
+# * Which games perform the best for each genre?
+# * What are the sales for each region?
+# * Which games perform the best for each region?
