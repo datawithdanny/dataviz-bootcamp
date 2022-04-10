@@ -36,6 +36,6 @@ html:
 launch_buttons:
   notebook_interface: "jupyterlab"
   colab_url: "https://colab.research.google.com"
-  binderhub_url: "https://mybinder.org/v2/gh/datawithdanny/dataviz-bootcamp/main"
+  binderhub_url: "https://mybinder.org"
   thebe: true
 
