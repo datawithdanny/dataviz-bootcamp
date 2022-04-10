@@ -30,5 +30,14 @@ build:
 preview:
 	open book/_build/html/index.html
 
+# Sync book requirements with root
+sync:
+	cp book/requirements.txt requirements.txt
+
+# Run tests to check files
+test:
+	diff requirements.txt book/requirements.txt > /dev/null \
+	|| echo 'requirements do not match!' >&2
+
 # Run all steps
-all: clean build preview
+all: clean build sync test preview
