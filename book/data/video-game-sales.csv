@@ -1,4 +1,4 @@
-Rank,Name,Platform,Year,Genre,Publisher,NA_Sales,EU_Sales,JP_Sales,Other_Sales,Global_Sales
+rank,game,platform,release_year,genre,publisher,north_america,europe,japan,other,total_sales
 259,Asteroids,2600,1980,Shooter,Atari,4,0.26,0,0.05,4.31
 545,Missile Command,2600,1980,Shooter,Atari,2.56,0.17,0,0.03,2.76
 1768,Kaboom!,2600,1980,Misc,Activision,1.07,0.07,0,0.01,1.15
