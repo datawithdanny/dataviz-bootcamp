@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: DataViz Bootcamp
-author: Danny Ma, Leah Nguyen & Akshaya Parthasarathy
+title: Data Visualization Bootcamp
+author: Danny Ma, Akshaya Parthasarathy & Leah Nguyen
 logo: logo.png
 copyright: "2022"
 
